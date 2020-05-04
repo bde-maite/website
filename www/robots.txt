@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /img
+Disallow: /includes/classes/email_format
+Sitemap: https://www.bde-maite.fr/sitemap.xml

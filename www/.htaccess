@@ -1,0 +1,51 @@
+#ErrorDocument 404 https://bde-maite.fr/404
+ErrorDocument 403 https://bde-maite.fr/403
+ErrorDocument 401 https://bde-maite.fr/401
+
+RewriteEngine On 
+RewriteCond %{HTTP_HOST} ^www.bde-maite\.fr [NC]
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://www.bde-maite.fr/$1 [R,L]
+
+RewriteCond %{HTTP_HOST} ^bde-maite\.fr [NC]
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://www.bde-maite.fr/$1 [R,L]
+
+
+#Redirections
+RewriteRule ^discord$ https://discord.gg/7DxrzB7 [R=301,L]
+RewriteRule ^drive$ https://drive.google.com/open?id=1hp-sf2rd0uWWmlIou-aoOQLIzAOQpdoc [R=301,L]
+
+
+RewriteRule ^espace-membre/sondage/$ index.php?page=espace-membre&em=sondage [L]
+RewriteRule ^espace-membre/sondage/([0-9-]+)/$ index.php?page=espace-membre&em=sondage&sondage=$1 [L]
+RewriteRule ^espace-membre/sondage/nouveau$ index.php?page=espace-membre&em=sondage&sondage=-1 [L]
+RewriteRule ^espace-membre/sondage/nouveau/$ index.php?page=espace-membre&em=sondage&sondage=-1 [L]
+
+RewriteRule ^espace-membre/emails/entrant/$ index.php?page=espace-membre&em=emails&boite=entrant [L]
+RewriteRule ^espace-membre/emails/entrant$ index.php?page=espace-membre&em=emails&boite=entrant [L]
+RewriteRule ^espace-membre/emails/sortant/$ index.php?page=espace-membre&em=emails&boite=sortant [L]
+RewriteRule ^espace-membre/emails/sortant$ index.php?page=espace-membre&em=emails&boite=sortant [L]
+RewriteRule ^espace-membre/emails/brouillon/$ index.php?page=espace-membre&em=emails&boite=brouillon [L]
+RewriteRule ^espace-membre/emails/brouillon$ index.php?page=espace-membre&em=emails&boite=brouillon [L]
+RewriteRule ^espace-membre/emails/$ index.php?page=espace-membre&em=emails&boite=INBOX [L]
+RewriteRule ^espace-membre/emails$ index.php?page=espace-membre&em=emails&boite=INBOX [L]
+
+
+RewriteRule ^espace-membre/$ index.php?page=espace-membre&em= [L]
+RewriteRule ^espace-membre$ index.php?page=espace-membre&em= [L]
+
+RewriteRule ^espace-membre/([a-z0-9-]+)/$ index.php?page=espace-membre&em=$1 [L]
+RewriteRule ^espace-membre/([a-z0-9-]+)$ index.php?page=espace-membre&em=$1 [L]
+
+RewriteRule ^([a-z0-9-]+)$ index.php?page=$1 [L]
+
+
+Options -Indexes
+
+#AuthName "Site internet en cours de developpement."
+#AuthType Basic
+#AuthUserFile "/home/bdemaitenf/www/.htpasswd"
+#<Limit GET POST>
+#Require valid-user
+#</Limit>
