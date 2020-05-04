@@ -2,8 +2,8 @@
 
 $em = array();
 
-$em['address'] = 'bdetest@ythepaut.com';
-$em['password'] = 'EfGLWKA9qoTu';
+$em['address'] = '';
+$em['password'] = '';
 $em['server'] = '{SSL0.OVH.NET:143}';
 
 

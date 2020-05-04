@@ -2,10 +2,10 @@
 
 $db = array();
 
-$db['ipdatabase'] = 'mysql:host=bdemaitenfmain.mysql.db;dbname=bdemaitenfmain';
-$db['ip'] = 'bdemaitenfmain.mysql.db';
-$db['login'] = 'bdemaitenfmain';
-$db['password'] = 'nhX3FVBMM4umXAvA';
+$db['ipdatabase'] = 'mysql:host=;dbname=';
+$db['ip'] = '';
+$db['login'] = '';
+$db['password'] = '';
 
 $db['prefix'] = 'EM' . '_';
 
